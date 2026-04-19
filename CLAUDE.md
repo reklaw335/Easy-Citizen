@@ -12,6 +12,8 @@ npm run start    # Run production build
 
 > **Node.js constraint:** This project uses Next.js 13 (not 14+) because the machine runs Node.js 18.13.0, which is below the 18.17.0 minimum required by Next.js 14. Do not upgrade Next.js without first confirming the Node version.
 
+> **Tailwind constraint:** Tailwind CSS is pinned to v3. Tailwind v4 moved its PostCSS plugin to a separate package (`@tailwindcss/postcss`) and is incompatible with the current `postcss.config.js` and `tailwind.config.ts` setup. Do not upgrade Tailwind without updating the PostCSS config and globals.css directives.
+
 ## Environment Variables
 
 Copy `.env.example` to `.env.local` and fill in keys before using live data:
